@@ -1,8 +1,8 @@
   // Variables for pins
 typedef struct ledPin {
-  uint8_t pin;
-  struct ledPin *next;
-  String name;
+    uint8_t pin;
+    struct ledPin *next;
+    String name;
 } LED;
 
 LED red, green, blue, *current;
@@ -20,11 +20,11 @@ uint8_t trimpotCurrent = 1, trimpotPrevious = 0,
         trimpotSerialCurrent = 5, trimpotSerialPrev = 0;
 
 typedef struct States {
-  stateFunc func;
-  String funcDesc;
-  struct States *nextState, *prevState;
-  bool funcToggle;
-  uint8_t speed;
+    stateFunc func;
+    String funcDesc;
+    struct States *nextState, *prevState;
+    bool funcToggle;
+    uint8_t speed;
 } State;
 
 State singleColor, rainbowFade, fiveOh, *currentState;
